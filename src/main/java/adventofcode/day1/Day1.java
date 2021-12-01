@@ -33,7 +33,6 @@ public class Day1 {
             previousWindowSum = currentWindowSum;
         }
 
-
         return increasedDepthCount;
     }
 
