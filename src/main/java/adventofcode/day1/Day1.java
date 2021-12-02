@@ -1,9 +1,9 @@
 package adventofcode.day1;
 
-import java.io.FileInputStream;
+import adventofcode.util.AocUtils;
+
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Day1 {
     public int part1() {
@@ -38,23 +38,12 @@ public class Day1 {
 
     private List<Integer> getListOfDepths() {
         LinkedList<Integer> result = new LinkedList<>();
-        try (
-                FileInputStream fileInputStream = new FileInputStream("src/main/resources/day1/sonarinput.txt");
-                Scanner sc = new Scanner(fileInputStream)
-        ) {
-            while (sc.hasNextLine()) {
-                String currentLine = sc.nextLine();
-
-                if (currentLine.trim().length() == 0) {
-                    break;
-                }
-
-                result.add(Integer.parseInt(currentLine));
+        LinkedList<String> lines = (LinkedList<String>) AocUtils.getLinesFromFile("src/main/resources/day1/sonarinput.txt");
+        lines.forEach(line -> {
+            if (line.trim().length() != 0) {
+                result.add(Integer.parseInt(line));
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        });
 
         return result;
     }
