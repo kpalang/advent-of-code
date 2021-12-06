@@ -14,31 +14,23 @@ public class Day4 {
         List<BingoBoard> bingoBoards = getListOfBoards(lines);
         List<Integer> drawingSequence = getDrawingSequence(lines);
 
-        Map<BingoBoard, Integer> boardScoreMap = new HashMap<>();
-        bingoBoards.forEach(bingoBoard -> boardScoreMap.put(bingoBoard, bingoBoard.getBoardWinningScore(drawingSequence)));
-        Map.Entry<BingoBoard, Integer> winningBoard = Collections.max(boardScoreMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue));
+        bingoBoards.forEach(bingoBoard -> bingoBoard.processBoard(drawingSequence));
+        BingoBoard winningBoard = Collections.min(bingoBoards, Comparator.comparingInt(BingoBoard::getDrawnCount));
 
-        return winningBoard.getValue();
+        return winningBoard.getFinalScore();
     }
 
     public int part2() {
-        //List<String> lines = AocUtils.getLinesFromFile("src/main/resources/day4/sampleinput.txt");
-        List<String> lines = AocUtils.getLinesFromFile("src/main/resources/day4/tonysinput.txt");
+        List<String> lines = AocUtils.getLinesFromFile("src/main/resources/day4/bingoinput.txt");
+        //List<String> lines = AocUtils.getLinesFromFile("src/main/resources/day4/tonysinput.txt");
 
         List<BingoBoard> bingoBoards = getListOfBoards(lines);
         List<Integer> drawingSequence = getDrawingSequence(lines);
 
-        Map<BingoBoard, Integer> boardScoreMap = new HashMap<>();
-        bingoBoards.forEach(bingoBoard -> boardScoreMap.put(bingoBoard, bingoBoard.getBoardWinningScore(drawingSequence)));
+        bingoBoards.forEach(bingoBoard -> bingoBoard.processBoard(drawingSequence));
+        BingoBoard losingBoard = Collections.max(bingoBoards, Comparator.comparingInt(BingoBoard::getDrawnCount));
 
-        List<Integer> scoreList = new ArrayList<>(boardScoreMap.values());
-        Collections.sort(scoreList);
-        //Collections.reverse(scoreList);
-        System.out.println(scoreList);
-
-        Map.Entry<BingoBoard, Integer> losingBoard = Collections.min(boardScoreMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue));
-
-        return losingBoard.getValue();
+        return losingBoard.getFinalScore();
     }
 
     private List<Integer> getDrawingSequence(List<String> lines) {

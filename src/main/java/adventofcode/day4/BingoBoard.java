@@ -1,5 +1,7 @@
 package adventofcode.day4;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -7,6 +9,11 @@ import java.util.List;
 public class BingoBoard {
     // Rows of columns
     private ArrayList<ArrayList<BingoCell>> board;
+
+    @Getter private int lastDrawnNumber;
+    @Getter private int drawnCount;
+    @Getter private int finalScore;
+    @Getter boolean isProcessed;
 
     public BingoBoard(List<String> rowList) {
         this.board = new ArrayList<>();
@@ -70,19 +77,17 @@ public class BingoBoard {
                 .sum();
     }
 
-    public int getBoardWinningScore(List<Integer> drawingSequence){
-        int lastDrawnValue;
-
-        for (Integer drawnValue : drawingSequence) {
-            this.mark(drawnValue);
-            lastDrawnValue = drawnValue;
+    public void processBoard(List<Integer> drawingSequence) {
+        for (Integer drawnNumber : drawingSequence) {
+            this.mark(drawnNumber);
+            this.drawnCount++;
+            this.lastDrawnNumber = drawnNumber;
 
             if (isWinning()) {
-                return getSumOfUnmarkedCells() * lastDrawnValue;
+                this.finalScore = this.getSumOfUnmarkedCells() * this.lastDrawnNumber;
+                return;
             }
         }
-
-        return -1;
     }
 
     @Override
