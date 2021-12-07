@@ -4,6 +4,7 @@ import adventofcode.day1.Day1;
 import adventofcode.day2.Day2;
 import adventofcode.day3.Day3;
 import adventofcode.day4.Day4;
+import adventofcode.day6.Day6;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,5 +30,12 @@ public class Main {
         System.out.println("Advent of code 2021: Day 4");
         System.out.printf("Part1 -> The winning score is %s%n", day4.part1());
         System.out.printf("Part2 -> The losing score is %s%n", day4.part2());
+
+
+        //Day6 day6 = new Day6();
+        //System.out.println("--------------------------");
+        //System.out.println("Advent of code 2021: Day 6");
+        //System.out.printf("Part1 -> The amount of fishies is %s%n", day6.part1());
+        //System.out.printf("Part2 -> The losing score is %s%n", day6.part2());
     }
 }
