@@ -5,6 +5,8 @@ import adventofcode.day2.Day2;
 import adventofcode.day3.Day3;
 import adventofcode.day4.Day4;
 import adventofcode.day6.Day6;
+import adventofcode.day7.Day7;
+import adventofcode.day9.Day9;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,17 +27,28 @@ public class Main {
         //System.out.printf("Part1 -> The submarine's power consumption is %s%n", day3.part1());
         //System.out.printf("Part2 -> The submarine's life support rating is %s%n", day3.part2());
 
-        Day4 day4 = new Day4();
-        System.out.println("--------------------------");
-        System.out.println("Advent of code 2021: Day 4");
-        System.out.printf("Part1 -> The winning score is %s%n", day4.part1());
-        System.out.printf("Part2 -> The losing score is %s%n", day4.part2());
-
+        //Day4 day4 = new Day4();
+        //System.out.println("--------------------------");
+        //System.out.println("Advent of code 2021: Day 4");
+        //System.out.printf("Part1 -> The winning score is %s%n", day4.part1());
+        //System.out.printf("Part2 -> The losing score is %s%n", day4.part2());
 
         //Day6 day6 = new Day6();
         //System.out.println("--------------------------");
         //System.out.println("Advent of code 2021: Day 6");
         //System.out.printf("Part1 -> The amount of fishies is %s%n", day6.part1());
         //System.out.printf("Part2 -> The losing score is %s%n", day6.part2());
+
+        //Day7 day7 = new Day7();
+        //System.out.println("--------------------------");
+        //System.out.println("Advent of code 2021: Day 7");
+        //System.out.printf("Part1 -> The fuel cost is %s%n", day7.part1());
+        //System.out.printf("Part2 -> The losing score is %s%n", day7.part2());
+
+        Day9 day9 = new Day9();
+        System.out.println("--------------------------");
+        System.out.println("Advent of code 2021: Day 9");
+        System.out.printf("Part1 -> The sum of all risk levels is %s%n", day9.part1());
+        System.out.printf("Part2 -> The losing score is %s%n", day9.part2());
     }
 }
