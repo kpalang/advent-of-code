@@ -1,12 +1,10 @@
 package adventofcode.util;
 
-import adventofcode.util.exception.CoordinateNotOnMapException;
 import com.google.common.collect.Range;
 
 import java.io.FileInputStream;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class AocUtils {
