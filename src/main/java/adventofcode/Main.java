@@ -5,6 +5,7 @@ import adventofcode.day10.Day10;
 import adventofcode.day2.Day2;
 import adventofcode.day3.Day3;
 import adventofcode.day4.Day4;
+import adventofcode.day5.Day5;
 import adventofcode.day6.Day6;
 import adventofcode.day7.Day7;
 import adventofcode.day8.Day8;
@@ -35,6 +36,12 @@ public class Main {
         //System.out.printf("Part1 -> The winning score is %s%n", day4.part1());
         //System.out.printf("Part2 -> The losing score is %s%n", day4.part2());
 
+        Day5 day5 = new Day5();
+        System.out.println("--------------------------");
+        System.out.println("Advent of code 2021: Day 5");
+        System.out.printf("Part1 -> The winning score is %s%n", day5.part1());
+        System.out.printf("Part2 -> The losing score is %s%n", day5.part2());
+
         //Day6 day6 = new Day6();
         //System.out.println("--------------------------");
         //System.out.println("Advent of code 2021: Day 6");
@@ -50,7 +57,7 @@ public class Main {
         //Day8 day8 = new Day8();
         //System.out.println("--------------------------");
         //System.out.println("Advent of code 2021: Day 8");
-        //System.out.printf("Part1 -> The sum of all risk levels is %s%n", day8.part1());
+        //System.out.printf("Part1 -> The digits appear times %s%n", day8.part1());
         //System.out.printf("Part2 -> The multiplication is %s%n", day8.part2());
 
         //Day9 day9 = new Day9();
@@ -59,10 +66,10 @@ public class Main {
         //System.out.printf("Part1 -> The sum of all risk levels is %s%n", day9.part1());
         //System.out.printf("Part2 -> The multiplication is %s%n", day9.part2());
 
-        Day10 day10 = new Day10();
-        System.out.println("--------------------------");
-        System.out.println("Advent of code 2021: Day 10");
-        System.out.printf("Part1 -> The total error score is %s%n", day10.part1());
-        System.out.printf("Part2 -> The middle score is %s%n", day10.part2());
+        //Day10 day10 = new Day10();
+        //System.out.println("--------------------------");
+        //System.out.println("Advent of code 2021: Day 10");
+        //System.out.printf("Part1 -> The total error score is %s%n", day10.part1());
+        //System.out.printf("Part2 -> The middle score is %s%n", day10.part2());
     }
 }
