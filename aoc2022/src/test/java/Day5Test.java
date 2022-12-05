@@ -18,7 +18,7 @@ class Day5Test {
     @Test
     void puzzle1_sample() {
         String result = day.puzzle1(basePath + "/sample.txt");
-        assertEquals(2, Integer.parseInt(result));
+        assertEquals("CMZ", result);
     }
 
     @Test
@@ -30,7 +30,7 @@ class Day5Test {
     @Test
     void puzzle2_sample() {
         String result = day.puzzle2(basePath + "/sample.txt");
-        assertEquals(4, Integer.parseInt(result));
+        assertEquals("MCD", result);
     }
 
     @Test
